@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./MoodComponent.css";
 
 function MoodComponent({ name }) {
-  // All moods in an array
+  
   const moods = ["Happy 😃", "Sad 😞", "Excited 🤩", "Angry 😠", "Relaxed 😌"];
 
-  // Track current mood index
+  
   const [moodIndex, setMoodIndex] = useState(0);
 
-  // Function to switch to the next mood
+  
   const toggleMood = () => {
     setMoodIndex((prevIndex) => (prevIndex + 1) % moods.length);
   };
