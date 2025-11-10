@@ -3,22 +3,22 @@ import MemberCard from "./MemberCard";
 import "./App.css";
 
 function App() {
-  // Team members (props)
+  
   const members = ["Hrushikesh", "Aditi", "Rohan", "Sneha"];
 
-  // Shared state: feedback counts for all members
+ 
   const [feedbackCounts, setFeedbackCounts] = useState(
     members.map(() => 0)
   );
 
-  // Function to handle individual feedback increments
+  
   const handleFeedback = (index) => {
     const updatedCounts = [...feedbackCounts];
     updatedCounts[index] += 1;
     setFeedbackCounts(updatedCounts);
   };
 
-  // Function to reset all counts
+  
   const resetAll = () => {
     setFeedbackCounts(members.map(() => 0));
   };
