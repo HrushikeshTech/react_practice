@@ -1,0 +1,95 @@
+/* Page styling */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main app container */
+.app-container {
+  text-align: center;
+  background: rgb(174, 23, 149);
+  border-radius: 20px;
+  padding: 40px;
+  width: 85%;
+  max-width: 900px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.app-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Individual member card */
+.member-card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.member-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feedback-count {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.feedback-btn {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback-btn:hover {
+  background-color: #fff;
+  color: #2575fc;
+}
+
+/* Reset button */
+.reset-btn {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ff7070;
+  transform: scale(1.05);
+}
