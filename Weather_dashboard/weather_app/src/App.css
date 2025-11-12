@@ -1,0 +1,241 @@
+/* 🌤 Full-screen gradient background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🌈 Center card container */
+.weather-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* 💎 Stylish glass card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  padding: 40px 45px;
+  width: 350px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover glow effect */
+.weather-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌤 Title */
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔄 Spinner animation */
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #ffffff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 30px auto;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 📍 City name */
+.city-name {
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* 🌡 Temperature & icon */
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.temperature {
+  font-size: 54px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #e2e2e2;
+}
+
+/* 💧 Extra info boxes */
+.extra-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.info-box {
+  flex: 1;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.info-box:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* 🔘 Refresh button */
+.refresh-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3c72;
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.refresh-btn:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* ❗ Error message */
+.error {
+  color: #ffcccc;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* 🌙 Small screen responsiveness */
+@media (max-width: 480px) {
+  .weather-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  .temperature {
+    font-size: 45px;
+  }
+  .city-name {
+    font-size: 22px;
+  }
+}
+
+/* 🔍 Search bar container */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+/* ✨ Input field with glow and smooth hover */
+.search-input {
+  width: 65%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a5298;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #7a7a7a;
+  font-style: italic;
+}
+
+.search-input:focus {
+  transform: scale(1.05);
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 🔘 Search button with hover animation */
+.search-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3c72;
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+}
+
+/* ✨ Small animation when clicking button */
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* 🧱 Responsive for mobile */
+@media (max-width: 480px) {
+  .search-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-input {
+    width: 90%;
+    text-align: center;
+  }
+
+  .search-btn {
+    width: 60%;
+  }
+}
