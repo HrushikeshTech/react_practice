@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add any global, base styles here. 
+  For example, setting a smooth transition for the theme change.
+*/
+body {
+  @apply antialiased transition-colors duration-500 ease-in-out;
+}
+
+/* Example of a custom utility class (optional, but sometimes helpful)
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+*/
